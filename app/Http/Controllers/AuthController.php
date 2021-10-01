@@ -24,8 +24,7 @@ class AuthController extends Controller
         $user = DB::table('users')
             ->insert([
                 'email' => $request->email,
-                'password' => bcrypt($request->password),
-                'role' => $request->role
+                'password' => bcrypt($request->password)
             ]);
         return response()->json(200);
     }

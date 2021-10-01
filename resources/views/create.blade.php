@@ -22,9 +22,9 @@
     </head>
     <body>
         <div class="container mt-5 border border-5">
-            <form class="p-5" action="{{ route('login') }}" method="post">
+            <form class="p-5" action="{{ route('registerForm') }}" method="post">
             {{ csrf_field() }}
-                <h1>SING IN</h1>
+            <h1>SING UP</h1>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" name="email" value="mateo@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -33,9 +33,11 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" name="password"  class="form-control" value="123456" id="exampleInputPassword1">
                 </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Repeat Password</label>
+                    <input type="password" name="password"  class="form-control" value="123456" id="exampleInputPassword1">
+                </div>
                 <button type="submit" class="btn btn-primary btn-block">GET IN!</button>
-                <br>
-                <a href="{{ route('sign_up') }}"><span class="badge bg-secondary">Create An Account</span></a>
             </form>
         </div>
         
